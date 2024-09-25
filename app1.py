@@ -2,6 +2,8 @@ import streamlit as st
 import pytesseract
 from PIL import Image
 
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR'
+
 # Function to extract text from the uploaded image
 def extract_text(image):
     text = pytesseract.image_to_string(image, lang='eng+hin')  # Extract text using Tesseract
